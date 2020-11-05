@@ -24,9 +24,6 @@ function draw() {
   if (gameState=="L3"){
    levelThree(); 
   }
-  if (gameState=="L4"){
-   youWin(); 
-  }
   
   text(("Score: " + score), width/2, 40);
   
@@ -84,16 +81,13 @@ function levelThree(){
     ballSize=ballSize -1;
     score= score +1;
   }
-  if(score>29){
-  gameState = "L4";
-  }
+  if(score>15){
+// level 4
+//   gameState = "L4";
+   
 
+  }
+  
 //  line(ballx, bally, mouseX, mouseY);
   ellipse(ballx, bally, ballSize, ballSize);
 } // end level thre
-
-function youWin(){
-background(bg);
-text("You Won! \n The kittens have warmed up to you, adopt one today!", width/2, height/2);
-  } 
-  
